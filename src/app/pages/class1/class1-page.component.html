@@ -1,0 +1,132 @@
+<h1>Clase 1. Programación reactiva</h1>
+<div class="example">
+  <p>
+    Partimos de este servicio que devuele 5 valores con un delay de 1 segundo.
+    Abre la consola de desarrollador para ver los resultados
+  </p>
+  <pre>
+        <highlight [highlight]="codeSnippet1"
+        [lineNumbers]="true" [languages]="['typescript']"></highlight>
+    </pre>
+</div>
+
+<div class="example">
+  <h2>Caso básico:</h2>
+  <p>Devuelve los valores desde el servicio</p>
+  <pre>
+    <highlight [highlight]="codeSnippet2"
+    [lineNumbers]="true" [languages]="['typescript']"></highlight>
+</pre>
+  <p><b>Resultado:</b> {{ result }}</p>
+  <button class="btn" (click)="testBasicObservable()">Probar</button>
+</div>
+
+<div class="example">
+  <h2>Mapping de valores:</h2>
+  <p>El valor devuelto del servicio se dobla</p>
+  <pre>
+        <highlight [highlight]="codeSnippet3"
+        [lineNumbers]="true" [languages]="['typescript']"></highlight>
+    </pre>
+  <p><b>Resultado:</b> {{ result }}</p>
+  <button class="btn" (click)="testMapObservable()">Probar</button>
+</div>
+
+<div class="example">
+  <h2>Filtrado de valores:</h2>
+  <p>El valor devuelto del servicio se muestra solo si es par</p>
+  <pre>
+        <highlight [highlight]="codeSnippet4"
+        [lineNumbers]="true" [languages]="['typescript']"></highlight>
+    </pre>
+  <p><b>Resultado:</b> {{ result }}</p>
+  <button class="btn" (click)="testFilterObservable()">Probar</button>
+</div>
+<div class="example">
+  <h2>Concatenado de valores:</h2>
+  <p>El valor devuelto del servicio se muestra solo si es par</p>
+  <pre>
+        <highlight [highlight]="codeSnippet5"
+        [lineNumbers]="true" [languages]="['typescript']"></highlight>
+    </pre>
+  <pre>
+        <highlight [highlight]="codeSnippet6"
+        [lineNumbers]="true" [languages]="['typescript']"></highlight>
+    </pre>
+  <p><b>Resultado:</b> {{ result }}</p>
+  <button class="btn" (click)="testConcatObservable()">Probar</button>
+</div>
+
+<div class="example">
+  <h2>Template driven form:</h2>
+  <p>Crear formularios</p>
+  <pre>
+        <highlight [highlight]="codeSnippet7"
+        [lineNumbers]="true" [languages]="['typescript']"></highlight>
+  </pre>
+  <pre>
+    <highlight [highlight]="codeSnippet8  "
+    [lineNumbers]="true" [languages]="['typescript']"></highlight>
+  </pre>
+  <input [(ngModel)]="myValue" />
+  <p><b>Resultado:</b> {{ myValue }}</p>
+</div>
+
+<div class="example">
+  <h2>Reactive forms module:</h2>
+  <p>Crear formularios reactivos con ReactiveFormsModule</p>
+  <pre>
+    <highlight [highlight]="codeSnippet9"
+    [lineNumbers]="true" [languages]="['typescript']"></highlight>
+  </pre>
+
+  <form [formGroup]="form">
+    <div class="col-sm-2 form-group">
+      <label for="courseDesc">Course Description</label>
+      <input
+        type="text"
+        id="courseDesc"
+        class="form-control"
+        formControlName="name"
+      />
+    </div>
+  </form>
+
+  <p><b>Resultado:</b> {{ nameValue }}</p>
+</div>
+
+<div class="example">
+  <h2>Biblografía:</h2>
+  <ul>
+    <li>
+      Angular RXJS :
+      <a href="https://angular.io/guide/rx-library">
+        https://angular.io/guide/rx-library</a
+      >
+    </li>
+    <li>
+      Rxjs reference:
+      <a href="https://rxjs.dev/api"> https://rxjs.dev/api</a>
+    </li>
+    <li>
+      Angular releases:
+      <a href="https://angular.io/guide/releases"
+        >https://angular.io/guide/releases</a
+      >
+    </li>
+    <li>
+      AngularJs vs Angular2:
+      <a
+        href="https://www.geeksforgeeks.org/angularjs-vs-angular2-features-and-comparison/"
+        >https://www.geeksforgeeks.org/angularjs-vs-angular2-features-and-comparison/</a
+      >
+    </li>
+    <li>
+      Selectores de componentes en angular2:
+      <a
+        href="https://blog.knoldus.com/different-types-of-component-selectors-in-angular/"
+        >https://blog.knoldus.com/different-types-of-component-selectors-in-angular/</a
+      >
+    </li>
+  </ul>
+</div>

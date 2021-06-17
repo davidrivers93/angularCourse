@@ -1,0 +1,32 @@
+<div class="form">
+  <form [formGroup]="form">
+    <div class="form-group">
+      <label>Nombre</label>
+      <input formControlName="name" />
+      <div *ngIf="getIfFieldIsValid('name')" class="error">
+        El nombre es requerido
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Apellidos</label>
+      <input formControlName="surName" />
+      <div *ngIf="getIfFieldIsValid('surName')" class="error">
+        El apellido es requerido
+      </div>
+    </div>
+    <div class="form-group">
+      <button
+        (click)="submitForm()"
+        [disabled]="form.invalid"
+        [class.btn-disabled]="form.invalid"
+        class="btn"
+      >
+        Enviar
+      </button>
+    </div>
+    <div>Es valido: {{ form.valid }}</div>
+    <div *ngIf="isSubmitted">
+      {{ form.value | json }}
+    </div>
+  </form>
+</div>

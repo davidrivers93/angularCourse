@@ -1,0 +1,42 @@
+<h3>
+  Dirección {{ index + 1 }}
+  <button (click)="onRemoveAddress()" class="">Eliminar</button>
+</h3>
+<form [formGroup]="group">
+  <div class="form-control">
+    <kendo-textbox
+      placeholder="Type your message here"
+      formControlName="direction"
+      [clearButton]="true"
+      placeholder="Dirección"
+    >
+    </kendo-textbox>
+  </div>
+  <div class="form-control">
+    <kendo-textbox
+      placeholder="Type your message here"
+      formControlName="postalCode"
+      [clearButton]="true"
+      placeholder="Código postal"
+    >
+    </kendo-textbox>
+  </div>
+  <div class="form-control">
+    <kendo-textbox
+      placeholder="Type your message here"
+      formControlName="city"
+      [clearButton]="true"
+      placeholder="Ciudad"
+    >
+    </kendo-textbox>
+  </div>
+  <div class="form-control">
+    <kendo-textbox
+      placeholder="Type your message here"
+      formControlName="country"
+      [clearButton]="true"
+      placeholder="País"
+    >
+    </kendo-textbox>
+  </div>
+</form>

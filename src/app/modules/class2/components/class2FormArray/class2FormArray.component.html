@@ -1,0 +1,19 @@
+<div class="form">
+  <button (click)="addAddressItem()" class="btn">Añadir dirección</button>
+  <div
+    class2-address
+    *ngFor="let address of form.controls; let i = index"
+    [index]="i"
+    [group]="address"
+    (removeAddress)="onRemoveAddress($event)"
+    class="address"
+  ></div>
+  <div *ngIf="!form.controls.length">No tienes direcciones añadidas</div>
+</div>
+
+<div>
+  Resultado:
+  <pre>
+    {{ form.value | json }}
+  </pre>
+</div>
